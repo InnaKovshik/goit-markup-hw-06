@@ -189,7 +189,7 @@ header {
 
 .navigation-list-link::after {
   content: '';
-  width: 100%;
+  width: 0;
   height: 4px;
   display: none;
   position: absolute;
@@ -201,7 +201,10 @@ header {
   transition-duration: 250ms;
 }
 
-.navigation-list-link:hover::after {
+.navigation-list-link:hover::after,
+.navigation-list-link:focus::after,
+.active::after {
+  width: 100%;
   display: block;
 }
 
@@ -772,7 +775,7 @@ li.portfolio-catalog:nth-last-child(3n) {
 }
 
 .modal-form-text {
-  position: re;
+  display: flex;
   margin-bottom: 4px;
   line-height: 1.16;
   letter-spacing: 0.01em;
