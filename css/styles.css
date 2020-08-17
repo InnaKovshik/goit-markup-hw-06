@@ -722,6 +722,7 @@ li.portfolio-catalog:nth-last-child(3n) {
   height: 50px;
   margin-right: 12px;
   font-size: 16px;
+  color: #ffffff;
   padding-top: 15px;
   padding-right: 16px;
   padding-bottom: 15px;
@@ -750,10 +751,28 @@ li.portfolio-catalog:nth-last-child(3n) {
 .modal-form {
   display: flex;
   width: 448px;
-  position: absolute;
   flex-direction: column;
   background-color: white;
   padding: 40px;
+}
+
+.modal-form-backdrop {
+  position: relative;
+}
+
+.modal-form-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  fill: black;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition-duration: 250ms;
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 5;
 }
 
 .modal-form-title {
@@ -840,24 +859,15 @@ li.portfolio-catalog:nth-last-child(3n) {
   margin: auto;
 }
 
-.modal-form-close-btn {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 30px;
-  height: 30px;
-  fill: black;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
-  border-radius: 50%;
-  transition-duration: 250ms;
-  transition: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .modal-form-close-btn:hover,
 .modal-form-close-btn:focus {
   fill: var(--background-color-focus);
   cursor: pointer;
+}
+
+.modal-form-checkbox:checked + .modal-form-option-check {
+  background-color: #2196f3;
+  border-radius: 2px;
 }
 
 .modal-form-icon {

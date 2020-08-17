@@ -409,7 +409,8 @@
             <!--Кнопка футер-->
             <div class="send-block">
                 <b class="send-text">Подпишитесь на рассылку</b>
-                <div class="send">
+                <form action="">
+                    <div class="send">
                     <input type="email" class="icon-mail" name="user-email" placeholder="E-mail" required />
                     <button type="submit" class="send-btn">
                         Подписаться
@@ -418,18 +419,21 @@
                         </svg>
                     </button>
                 </div>
+                </form>                
             </div>
             </div>
             </footer>
 
-            <div data-modal class="backdrop is-hidden">
-                                   <form action="#" class="modal-form">
-                    <button data-modal-close class="modal-form-close-btn">
+            <!--Modal form-->
+            <div data-modal class="backdrop is-hidden">     
+                <div class="modal-form-backdrop">
+                     <button data-modal-close class="modal-form-close-btn">
                         <svg width="11" height="11">
                             <use href="./images/symbol-defs2.svg#icon-close"></use>
                         </svg>
                     </button>
-                    <h2 class="modal-form-title">Оставьте свои данные, мы вам перезвоним</h2>
+                     <form action="#" class="modal-form">
+                                       <h2 class="modal-form-title">Оставьте свои данные, мы вам перезвоним</h2>
                     <label class="modal-form-option-label">
                         <span class="modal-form-text">Имя</span>                        
                         <input type="text" name="name" class="modal-form-input" required>
@@ -458,7 +462,10 @@
                         <span class="modal-form-option-span">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></span>
                     </label>
                     <button class="modal-form-btn">Отправить</button>
-                      </form>
+                      </form>                 
+                </div> 
+                                  
+                                                 
                 </div>
                      <script src="./js/modal.js"></script>                        
             </body>
